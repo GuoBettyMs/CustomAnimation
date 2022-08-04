@@ -1,4 +1,4 @@
 # CustomAnimation
 
 主要效果
-![Image text](Screenshots/shouye.png) 
+![Image text](https://github.com/GuoBettyMs/CustomAnimation/blob/main/CustomAnimation/Screenshots/shhouye.png) 
