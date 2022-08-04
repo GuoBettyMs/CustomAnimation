@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--iPhone11-->
+        <scene sceneID="cNi-xz-4Ds">
+            <objects>
+                <viewController id="MSh-Em-Zxz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DCA-JS-b1o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone11" translatesAutoresizingMaskIntoConstraints="NO" id="qis-yg-Hew">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rwm-Qu-4YN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qis-yg-Hew" firstAttribute="bottom" secondItem="Rwm-Qu-4YN" secondAttribute="bottom" id="Gc8-F0-13h"/>
+                            <constraint firstItem="qis-yg-Hew" firstAttribute="trailing" secondItem="Rwm-Qu-4YN" secondAttribute="trailing" id="I0L-rE-EEm"/>
+                            <constraint firstItem="qis-yg-Hew" firstAttribute="leading" secondItem="Rwm-Qu-4YN" secondAttribute="leading" id="R4f-Tg-0Lq"/>
+                            <constraint firstItem="qis-yg-Hew" firstAttribute="top" secondItem="Rwm-Qu-4YN" secondAttribute="top" id="i2b-yI-rVK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="iPhone11" image="first" id="Gs7-97-Ghh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Io1-j7-C3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828.985507246377" y="-947.54464285714278"/>
+        </scene>
+        <!--iPadMini-->
+        <scene sceneID="HPN-P1-q1P">
+            <objects>
+                <viewController id="y4g-2D-gvc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HkY-CJ-vI5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPadmini" translatesAutoresizingMaskIntoConstraints="NO" id="ODj-eF-P8u">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oZ1-kT-F1v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ODj-eF-P8u" firstAttribute="trailing" secondItem="oZ1-kT-F1v" secondAttribute="trailing" id="BzW-2u-XEH"/>
+                            <constraint firstItem="ODj-eF-P8u" firstAttribute="bottom" secondItem="oZ1-kT-F1v" secondAttribute="bottom" id="JK4-vv-LXw"/>
+                            <constraint firstItem="ODj-eF-P8u" firstAttribute="top" secondItem="oZ1-kT-F1v" secondAttribute="top" id="T07-VB-d39"/>
+                            <constraint firstItem="ODj-eF-P8u" firstAttribute="leading" secondItem="oZ1-kT-F1v" secondAttribute="leading" id="umz-I8-Vgn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="iPadMini" image="second" id="mPV-dm-YtS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goB-eh-XUk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828.985507246377" y="-254.46428571428569"/>
+        </scene>
+        <!--Main Tab BarC-->
+        <scene sceneID="MHv-6x-V12">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarCID" id="9Id-4a-FkK" customClass="MainTabBarC" customModule="CustomAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XRX-tE-bhE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemBlueColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="y4g-2D-gvc" kind="relationship" relationship="viewControllers" id="5A0-gb-DhF"/>
+                        <segue destination="MSh-Em-Zxz" kind="relationship" relationship="viewControllers" id="8mJ-uw-Tj1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ij5-9o-60T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="-652"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="iPadmini" width="539" height="602"/>
+        <image name="iPhone11" width="594" height="712"/>
+        <image name="second" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

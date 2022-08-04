@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ContainerVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ContainerVCID" id="Y6W-OH-hqX" customClass="ContainerVC" customModule="CustomAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URQ-Z6-9Pw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="VDB-pa-6Mz"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="o4O-Ti-0xR" kind="embed" identifier="segueAVPlayerVC" id="FJ4-ef-1Jg"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7s-ln-BOy">
+                                <rect key="frame" x="0.0" y="352" width="414" height="510"/>
+                                <connections>
+                                    <segue destination="awj-kq-Qtt" kind="embed" identifier="segueTableVC" id="lTO-k7-3MA"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="URQ-Z6-9Pw" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="15y-qY-aa3"/>
+                            <constraint firstItem="URQ-Z6-9Pw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="7E6-NU-dY3"/>
+                            <constraint firstItem="URQ-Z6-9Pw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ChW-uq-fdc"/>
+                            <constraint firstItem="c7s-ln-BOy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Nq5-k1-R9b"/>
+                            <constraint firstItem="c7s-ln-BOy" firstAttribute="top" secondItem="URQ-Z6-9Pw" secondAttribute="bottom" constant="8" id="h0M-za-fv1"/>
+                            <constraint firstItem="c7s-ln-BOy" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="wPg-R1-fTo"/>
+                            <constraint firstItem="c7s-ln-BOy" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="xiT-6c-y54"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="63.616071428571423"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="uL9-NF-h4Z">
+            <objects>
+                <avPlayerViewController storyboardIdentifier="playerVC" videoGravity="AVLayerVideoGravityResizeAspect" id="o4O-Ti-0xR" customClass="AVplayerVC" customModule="CustomAnimation" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAD-s7-yjR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="-136"/>
+        </scene>
+        <!--TableVC-->
+        <scene sceneID="6Y9-hW-P4z">
+            <objects>
+                <tableViewController storyboardIdentifier="tableVC" id="awj-kq-Qtt" customClass="TableVC" customModule="CustomAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="xIN-TT-Hph">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="510"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Ovv-Ee-Jan">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ovv-Ee-Jan" id="1fc-h1-p0s">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="awj-kq-Qtt" id="tBa-uB-ZQq"/>
+                            <outlet property="delegate" destination="awj-kq-Qtt" id="d3Y-S7-Npq"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4i-lt-gqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="179"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

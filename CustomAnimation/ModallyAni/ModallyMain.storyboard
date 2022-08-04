@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Modally MainVC-->
+        <scene sceneID="Czh-0k-nUT">
+            <objects>
+                <viewController storyboardIdentifier="ModallyMainVCID" id="1Ye-Pd-zIH" customClass="ModallyMainVC" customModule="CustomAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QIc-ed-hhR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24t-5f-XaZ">
+                                <rect key="frame" x="92" y="416.5" width="230" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="ModallyMain"/>
+                                <connections>
+                                    <action selector="showDetail:" destination="1Ye-Pd-zIH" eventType="touchUpInside" id="CeH-mq-mfF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kHQ-8N-HuS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="24t-5f-XaZ" firstAttribute="centerX" secondItem="QIc-ed-hhR" secondAttribute="centerX" id="UQb-oz-D0e"/>
+                            <constraint firstItem="24t-5f-XaZ" firstAttribute="centerY" secondItem="QIc-ed-hhR" secondAttribute="centerY" id="aHl-FX-NnW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMF-5Z-IOP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="98"/>
+        </scene>
+        <!--Modally DetailVC-->
+        <scene sceneID="MZI-Cp-R0q">
+            <objects>
+                <viewController storyboardIdentifier="ModallyDetailVCID" id="UEa-1K-XDV" customClass="ModallyDetailVC" customModule="CustomAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J3s-so-sNc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="gHQ-q5-cc4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O2l-ue-di1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gHQ-q5-cc4" firstAttribute="top" secondItem="O2l-ue-di1" secondAttribute="top" id="nSt-3K-vzd"/>
+                            <constraint firstAttribute="trailing" secondItem="gHQ-q5-cc4" secondAttribute="trailing" id="oJw-57-eUG"/>
+                            <constraint firstItem="gHQ-q5-cc4" firstAttribute="leading" secondItem="O2l-ue-di1" secondAttribute="leading" id="tTg-rp-WFo"/>
+                            <constraint firstAttribute="bottom" secondItem="gHQ-q5-cc4" secondAttribute="bottom" id="veC-Vt-Wy7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailImgView" destination="gHQ-q5-cc4" id="WPV-zv-hFq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBl-pT-G3Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913.04347826086962" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3" width="889" height="500"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
